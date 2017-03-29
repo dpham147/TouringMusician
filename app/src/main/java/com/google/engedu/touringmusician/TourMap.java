@@ -32,6 +32,7 @@ public class TourMap extends View {
 
     private Bitmap mapImage;
     private CircularLinkedList list = new CircularLinkedList();
+
     private String insertMode = "Add";
 
     public TourMap(Context context) {
@@ -81,6 +82,7 @@ public class TourMap extends View {
                 } else {
                     list.insertBeginning(p);
                 }
+
                 TextView message = (TextView) ((Activity) getContext()).findViewById(R.id.game_status);
                 if (message != null) {
                     message.setText(String.format("Tour length is now %.2f", list.totalDistance()));
